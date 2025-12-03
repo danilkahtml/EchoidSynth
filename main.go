@@ -4,13 +4,13 @@ import (
 	"embed"
 	"log"
 
-	"echoid/idi"
-
 	"fyne.io/fyne/v2"
 	"fyne.io/fyne/v2/app"
 	"fyne.io/fyne/v2/container"
 	"fyne.io/fyne/v2/lang"
 	"fyne.io/fyne/v2/theme"
+	"fyne.io/fyne/v2/widget"
+
 )
 
 func do(name string) func() {
@@ -21,8 +21,6 @@ func do(name string) func() {
 var TranslationsFS embed.FS
 
 func main() {
-    idi.Nuhui()
-
 	App := app.New()
 
 	log.Println(lang.SystemLocale())
